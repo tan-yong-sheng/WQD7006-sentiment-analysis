@@ -9,6 +9,15 @@ This project focuses on evaluating and comparing various text representation tec
 - To evaluate and compare the performance of sentiment analysis classifier models across various text representation techniques, including Bag-of-Words, TF-IDF, Word2Vec, SBERT, and large language model (LLM) embeddings.
 - To conduct SHAP analysis to interpret model predictions and feature contributions for each text representation method.
 
+## Our Notebooks
+
+Explore different text representation techniques used in our sentiment analysis classifier:
+
+- [Bag of Words](./notebook/02_text-representation-comparison/01_bow.ipynb) : Feature extraction using -of-Words with max_features = 10,000
+- [Term Frequency-Inverse Document Frequency (TF-IDF)](./notebook/02_text-representation-comparison/02_tf_idf.ipynb) : Feature Extraction using TF-IDF with max_features = 10,000
+- [Word2vec](./notebook/02_text-representation-comparison/03_word2vec.ipynb) : Using Word2Vec embedding model with dimension size of 300
+- [LLM embedding](./notebook/02_text-representation-comparison/05_llm_embedding.ipynb) : Using LLM embedding model called `text-embedding-004` from Google's Gemini with dimension size of 768
+
 ## Our Dataset
 
 This dataset describes the contents of the heart-disease diagnosis.
@@ -37,7 +46,6 @@ The dataset in this study is from [Kaggle](https://www.kaggle.com/datasets/crowd
 | tweet_location               | Text          | Location specified in the user's profile.                                                   | 
 | user_timezone                | Categorical   | Time zone specified in the user's profile.                                                  | 
 
-<br/>
 
 ## Variables Used for Modeling
 
@@ -45,5 +53,3 @@ The dataset in this study is from [Kaggle](https://www.kaggle.com/datasets/crowd
 |-----------------------------|-------------|--------------|
 | **Target Variable: `encoded_sentiment`** | Categorical | This is an engineered variable derived from `airline_sentiment` for multi-class sentiment classification. It encodes sentiment as: 0 = Negative, 1 = Neutral, 2 = Positive. |
 | **Feature: `text`**         | Text        | Contains consumer tweets about U.S. airlines. This field undergoes preprocessing, including removal of URLs and mentions (`@`), stopword removal, and stemming. We will be performing different feature extraction techniques such as bag of words, TF-IDF, word2vec, SBERT, and LLM embedding to compare the model performance under different text representation techniques. |
-
-<br/>
