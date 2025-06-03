@@ -11,7 +11,10 @@ Using machine learning techniques, this project focuses on evaluating and compar
 
 ## Our Notebooks
 
-Explore different text representation techniques used in our sentiment analysis classifier:
+To prepare our textual data for sentiment classification, we first conducted an Exploratory Data Analysis (EDA). This crucial step helped us understand the data's characteristics before assigning sentiment labels: positive (2), neutral (1), and negative (0).
+- [EDA notebook](./notebook/01_intro/eda.ipynb)
+
+We've also explored different text representation techniques used in our sentiment analysis classifier:
 
 - [Bag of Words](./notebook/02_text-representation-comparison/01_bow.ipynb) : Feature extraction using -of-Words with max_features = 10,000
 - [Term Frequency-Inverse Document Frequency (TF-IDF)](./notebook/02_text-representation-comparison/02_tf_idf.ipynb) : Feature Extraction using TF-IDF with max_features = 10,000
