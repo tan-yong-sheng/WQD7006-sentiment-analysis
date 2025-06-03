@@ -1,9 +1,13 @@
-## Comparative Analysis of Text Representation Techniques for Sentiment Classification of Airline Tweets
+# Comparative Analysis of Text Representation Techniques for Sentiment Classification of Airline Tweets
 
 With social media booming, people are sharing their thoughts and opinions online more than ever. This creates a huge stream of text data that can be really useful for understanding how people feel about different topics. That’s where sentiment analysis comes in — it’s all about using computers to figure out whether something written in text is positive, negative, or neutral. But before any machine learning model can do that, we first need to turn those words into numbers it can actually understand. This step, called text representation or feature extraction, plays a big role in how well the sentiment analysis works.
 
-This project focuses on evaluating and comparing various text representation techniques using a dataset of airline-related tweets. The methods assessed range from traditional approaches such as Bag-of-Words (BoW) and TF-IDF, to more advanced models like N-grams, Word2Vec, and transformer-based embeddings such as Sentence-BERT (SBERT). These features are used to train classification models including Logistic Regression, Decision Tree, and Gradient Boosting. The study aims to identify which combinations of representation and model deliver the best performance, with additional tuning to further optimize results.
+This project focuses on evaluating and comparing various text representation techniques using a dataset of airline-related tweets. The methods assessed range from traditional approaches such as Bag-of-Words (BoW) and TF-IDF, N-grams, to more advanced models like Word2Vec, and transformer-based embeddings such as Sentence-BERT (SBERT). These features are used to train classification models including Logistic Regression, Decision Tree, and XGBoost. The study aims to identify which combinations of representation and model deliver the best performance, with additional tuning to further optimize results.
 
+
+## Problem Statement
+- To compare model performance of sentiment analysis classifier model under different text representation techniques
+- To 
 
 ## Our Dataset
 
