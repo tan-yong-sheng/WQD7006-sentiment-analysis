@@ -5,6 +5,7 @@ import time
 import threading # For thread identification in logs
 import pandas as pd # Added for type hinting and series processing
 import concurrent.futures # Added for multi-threading
+import gzip
 import csv # Added for CSV writing
 from typing import Union, List, Optional, Dict, Any # For type hinting
 from dotenv import load_dotenv, find_dotenv # Ensure dotenv is imported
@@ -127,7 +128,7 @@ def _prepare_embedding_tasks(
             if output_csv_path and csv_writer_lock:
                 row_to_write = [current_id, text_content, None, "skipped_invalid_text"] + additional_values_for_row
                 with csv_writer_lock:
-                    with open(output_csv_path, 'a', newline='', encoding='utf-8') as f_csv:
+                    with gzip.open(output_csv_path, 'at', newline='', encoding='utf-8') as f_csv:
                         writer = csv.writer(f_csv)
                         writer.writerow(row_to_write)
             elif all_embeddings_placeholders is not None:
@@ -178,7 +179,7 @@ def _process_completed_task(
         embedding_json = json.dumps(final_embedding_for_text) if final_embedding_for_text else None
         row_to_write = [text_id, text_content, embedding_json, status_message] + additional_values_ordered
         with csv_writer_lock:
-            with open(output_csv_path, 'a', newline='', encoding='utf-8') as f_csv:
+            with gzip.open(output_csv_path, 'at', newline='', encoding='utf-8') as f_csv:
                 writer = csv.writer(f_csv)
                 writer.writerow(row_to_write)
     elif all_embeddings_placeholders is not None:
@@ -234,7 +235,7 @@ def generate_embeddings_from_series(
         # Still write header if CSV path is given for an empty operation
         if output_csv_path:
             try:
-                with open(output_csv_path, 'w', newline='', encoding='utf-8') as f_header:
+                with gzip.open(output_csv_path, 'wt', newline='', encoding='utf-8') as f_header:
                     csv.writer(f_header).writerow(fixed_headers + ordered_additional_column_names)
             except IOError as e:
                  print(f"Warning: Could not write CSV header for empty series to {output_csv_path}: {e}")
@@ -248,7 +249,7 @@ def generate_embeddings_from_series(
         print(f"Starting embedding generation for {num_texts} texts. Results will be saved to {output_csv_path}.")
         csv_writer_lock = threading.Lock()
         try:
-            with open(output_csv_path, 'w', newline='', encoding='utf-8') as f:
+            with gzip.open(output_csv_path, 'wt', newline='', encoding='utf-8') as f:
                 writer = csv.writer(f)
                 writer.writerow(final_csv_header)
         except IOError as e:
