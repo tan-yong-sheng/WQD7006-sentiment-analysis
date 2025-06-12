@@ -19,7 +19,7 @@ We've also explored various text representation techniques for our sentiment ana
 - [Bag of Words](./notebook/02_text-representation-comparison/01_bow.ipynb) : Feature extraction using -of-Words with max_features = 10,000
 - [Term Frequency-Inverse Document Frequency (TF-IDF)](./notebook/02_text-representation-comparison/02_tf_idf.ipynb) : Feature Extraction using TF-IDF with max_features = 10,000
 - [Word2vec](./notebook/02_text-representation-comparison/03_word2vec.ipynb) : Using Word2Vec embedding model with dimension size of 300
-- [SBERT](./notebook/02_text-representation-comparison/04_sbert_embedding.ipynb): Using sbert embedding model called `all-MiniLM-L6-v2` with dimension size of 384
+- [SBERT embedding](./notebook/02_text-representation-comparison/04_sbert_embedding.ipynb): Using sbert embedding model called `all-MiniLM-L6-v2` with dimension size of 384
 - [LLM embedding](./notebook/02_text-representation-comparison/05_llm_embedding.ipynb) : Using LLM embedding model called `text-embedding-004` from Google's Gemini with dimension size of 768
 
 ## Our Dataset
