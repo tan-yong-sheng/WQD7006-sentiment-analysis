@@ -24,7 +24,7 @@ We've also explored various text representation techniques for our sentiment ana
 - [SBERT embedding](./notebook/02_text-representation-comparison/06_sbert_embedding.ipynb): Using sbert embedding model called `all-MiniLM-L6-v2` with dimension size of 384
 - [LLM embedding](./notebook/02_text-representation-comparison/07_llm_embedding.ipynb) : Using LLM embedding model called `text-embedding-004` from Google's Gemini with dimension size of 768
 
-Also, we have also tuned our XGBoost model with LLM embedding for better performance. Check it out here
+Also, we have also tuned our XGBoost model with LLM embedding for better performance. Check it out here: [Hyperparameter tuning notebook](./notebook/03_hyperparameter_tuning\llm_embedding_hyperparameter_tuning.ipynb)
 
 ## Our Dataset
 
