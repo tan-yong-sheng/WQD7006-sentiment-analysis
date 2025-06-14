@@ -16,10 +16,10 @@ To prepare our textual data for sentiment classification, we first conducted an 
 
 We've also explored various text representation techniques for our sentiment analysis classifier, which uses three sentiment labels: positive (2), neutral (1), and negative (0), as follows:
 
-- [Bag of Words](./notebook/02_text-representation-comparison/01_bow.ipynb) : Feature extraction using -of-Words with max_features = 10,000
+- [Bag of Words](./notebook/02_text-representation-comparison/01_bow.ipynb) : Feature extraction using Bag-of-Words with max_features = 10,000
 - [Term Frequency-Inverse Document Frequency (TF-IDF)](./notebook/02_text-representation-comparison/02_tf_idf.ipynb) : Feature Extraction using TF-IDF with max_features = 10,000
-- [Ngrams with bag of words](./notebook/02_text-representation-comparison/03_ngrams_bow.ipynb)
-- [Ngrams with bag ](./notebook/02_text-representation-comparison/04_ngrams_tfidf.ipynb)
+- [Ngrams with bag of words](./notebook/02_text-representation-comparison/03_ngrams_bow.ipynb): Extracted unigram to trigram features using the Bag-of-Words model with a vocabulary limited to the top 10,000 features. This method captures raw frequency counts of each n-gram across documents.
+- [Ngrams with TF-IDF](./notebook/02_text-representation-comparison/04_ngrams_tfidf.ipynb): Extracted unigram to trigram features using TF-IDF weighting, also capped at the top 10,000 features. This method accounts for the relative importance of terms across the entire corpus by down-weighting frequent but less informative n-grams.
 - [Word2vec](./notebook/02_text-representation-comparison/05_word2vec.ipynb) : Using Word2Vec embedding model with dimension size of 300
 - [SBERT embedding](./notebook/02_text-representation-comparison/06_sbert_embedding.ipynb): Using sbert embedding model called `all-MiniLM-L6-v2` with dimension size of 384
 - [LLM embedding](./notebook/02_text-representation-comparison/07_llm_embedding.ipynb) : Using LLM embedding model called `text-embedding-004` from Google's Gemini with dimension size of 768
