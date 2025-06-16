@@ -6,7 +6,18 @@ Using machine learning techniques, this project focuses on evaluating and compar
 
 
 ## Problem Statement
+Airline reviews posted on social media platforms, particularly Twitter, are composed of unstructured, informal textual data. Tweets are often short and filled with slang, typos, and emojis, which makes it hard to automatically figure out if a customer is happy or upset with the airline companies.
+
+Such short texts pose unique challenges for sentiment analysis, as they contain limited context and sparse linguistic cues. This makes it crucial to use effective text representation techniques that can capture meaningful information from minimal content.
+
+To address this issue, the study aims to evaluate and compare various text representation methods—including traditional approaches like Bag-of-Words, N-grams, and TF-IDF, as well as advanced embeddings such as Word2Vec, SBERT, and large language model (LLM) embeddings—on short tweets. The goal is to identify which representations enable machine learning models to most accurately classify tweet sentiments into positive, negative, or neutral categories.
+
+## Research Goals
+The goals for this research are to:
 - To evaluate and compare the performance of sentiment analysis classifier models across various text representation techniques, including Bag-of-Words, N-grams, TF-IDF, Word2Vec, SBERT, and large language model (LLM) embeddings.
+- Evaluate the best combination of a text method and a machine learning model to get the most accurate results for airline tweets.
+
+This research aims to provide a structured framework for extracting sentiment insights from unstructured airline feedback, ultimately supporting more responsive and data-driven decision-making in the airline industry.
 
 ## Our Notebooks
 
