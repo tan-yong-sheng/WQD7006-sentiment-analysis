@@ -6,8 +6,7 @@ Using machine learning techniques, this project focuses on evaluating and compar
 
 
 ## Problem Statement
-- To evaluate and compare the performance of sentiment analysis classifier models across various text representation techniques, including Bag-of-Words, TF-IDF, Word2Vec, SBERT, and large language model (LLM) embeddings.
-- To conduct SHAP analysis to interpret model predictions and feature contributions for each text representation method.
+- To evaluate and compare the performance of sentiment analysis classifier models across various text representation techniques, including Bag-of-Words, N-grams, TF-IDF, Word2Vec, SBERT, and large language model (LLM) embeddings.
 
 ## Our Notebooks
 
